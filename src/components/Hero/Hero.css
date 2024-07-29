@@ -5,8 +5,11 @@
 }
 
 .hero-wrapper .hero-container {
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+	row-gap: 2rem;
 }
 
 /* Right Side  */
@@ -89,4 +92,39 @@
 
 .stat > :nth-child(1) > :last-child {
 	color: orange;
+}
+
+@media (max-width: 875px) {
+	.hero-wrapper .hero-container {
+		justify-content: center;
+		row-gap: 2rem;
+		padding: 1rem;
+		flex-direction: column;
+	}
+
+	.hero-left > * {
+		width: 100%;
+		align-items: center;
+	}
+
+	.hero-title {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.hero-title > h1 {
+		font-size: 3rem;
+		line-height: 3.5rem;
+		font-weight: 500;
+	}
+	.hero-right {
+		width: 100%;
+	}
+}
+
+@media (max-widh: 640px) {
+	.hero-container {
+		margin-top: 2rem;
+	}
 }

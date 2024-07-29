@@ -7,22 +7,24 @@ import Companies from '../Companies/Companies';
 import Properties from '../Properties/Properties';
 import Value from '../Value/Value';
 import Contact from '../Contact/Contact';
-import GetStarted from '../GetStarted/GetStarted';
+import Footer from '../Footer/Footer';
 
 const App = () => {
 	return (
-		<div className='App'>
-			<div>
-				<div className='white-gradient' />
-				<Header />
-				<Hero />
+		<>
+			<div className='App'>
+				<div>
+					<div className='white-gradient' />
+					<Header />
+					<Hero />
+				</div>
+				<Companies />
+				<Properties />
+				<Value />
+				<Contact />
+				<Footer />
 			</div>
-			<Companies />
-			<Properties />
-			<Value />
-			<Contact />
-			<GetStarted />
-		</div>
+		</>
 	);
 };
 

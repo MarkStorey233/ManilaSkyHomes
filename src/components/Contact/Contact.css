@@ -58,3 +58,9 @@
 	border: none;
 	outline: none;
 }
+
+@media (max-width: 875px) {
+	.c-container > * {
+		flex-direction: column;
+	}
+}

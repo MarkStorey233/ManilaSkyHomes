@@ -1,12 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import ContactImg from '../../assets/images/contact.jpg';
 import { BsEnvelope, BsPerson } from 'react-icons/bs';
 
 const Contact = () => {
+	useEffect(() => {
+		AOS.init({
+			offset: 100,
+			delay: 800,
+			duration: 1000,
+			easing: 'ease',
+		});
+	}, []);
 	const form = useRef();
 
 	const sendEmail = (e) => {
@@ -41,8 +51,14 @@ const Contact = () => {
 	};
 
 	return (
-		<section className='c-wrapper'>
-			<div className='flexCenter innerWidth paddings c-container'>
+		<section
+			className='c-wrapper'
+			id='contact-form'
+		>
+			<div
+				className='flexCenter innerWidth paddings c-container'
+				data-aos='fade-in'
+			>
 				{/* Left Side */}
 				<div className='flexColStart c-left'>
 					<span className='orangeText'>Our Contacts</span>
@@ -54,6 +70,9 @@ const Contact = () => {
 					</span>
 
 					<form
+						data-aos='fade-in'
+						data-aos-duration='800'
+						data-aos-delay='600'
 						className='flexColStart contactModes'
 						ref={form}
 						onSubmit={sendEmail}
@@ -101,8 +120,13 @@ const Contact = () => {
 					</form>
 				</div>
 				{/* Right Side */}
-				<div className='c-right flexColEnd'>
-					<div className='img-container'>
+				<div className='c-right flexEnd'>
+					<div
+						className='img-container'
+						data-aos='fade-left'
+						data-aos-duration='800'
+						data-aos-delay='600'
+					>
 						<img
 							src={ContactImg}
 							alt='Contact'

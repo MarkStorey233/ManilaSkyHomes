@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Hero.css';
 
 import HeroImg from '../../assets/images/hero-image.png';
 import { HiLocationMarker } from 'react-icons/hi';
 import CountUp from 'react-countup';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
 	return (
 		<section className='hero-wrapper'>
-			<div className='paddings innerWidth flexCenter hero-container '>
+			<div className='paddings innerWidth hero-container'>
 				{/* left side */}
 
-				<div className='flexColStart hero-left'>
+				<motion.div
+					className='flexColStart hero-left'
+					initial={{ x: '-5rem', opacity: 0 }}
+					animate={{ x: '0rem', opacity: 1 }}
+					transition={{ duration: 5, type: 'spring' }}
+				>
 					<div className='hero-title'>
 						<div className='orange-circle' />
 						<h1>
@@ -35,7 +41,10 @@ const Hero = () => {
 
 					<div className='flexCenter searchBar'>
 						<HiLocationMarker className='icon' />
-						<input type='text' placeholder='Seach properties here'/>
+						<input
+							type='text'
+							placeholder='Seach properties here'
+						/>
 						<button className='button'>Search</button>
 					</div>
 
@@ -83,16 +92,21 @@ const Hero = () => {
 
 						{/* Stat End */}
 					</div>
-				</div>
+				</motion.div>
 
 				{/* right side */}
 				<div className='flexCenter hero-right'>
-					<div className='img-container'>
+					<motion.div
+						className='img-container'
+						initial={{ x: '5rem', opacity: 0 }}
+						animate={{ x: '0rem', opacity: 1 }}
+						transition={{ duration: 5, type: 'spring' }}
+					>
 						<img
 							src={HeroImg}
 							alt='Hero Image'
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</section>

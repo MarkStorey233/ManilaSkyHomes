@@ -1,6 +1,6 @@
 :root {
 	--primary: #1f3e72;
-	--secondary: rgba(222, 4, 4, 0.78);
+	--secondary: rgb(140 139 139);
 	--fontColor: whitesmoke;
 	--black: #131110;
 	--blue-gradient: linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
@@ -23,7 +23,45 @@
 
 .h-menu {
 	gap: 2rem;
+	transition: all 300ms ease-in-out;
+	position: sticky;
 }
 .h-menu > a:hover {
 	cursor: pointer;
+	color: gold;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.511);
+}
+
+.h-menu .active {
+	color: goldenrod; /* Color for the active link */
+	font-weight: bold;
+}
+.menu-icon {
+	display: none;
+}
+
+@media (max-width: 786px) {
+	.menu-icon {
+		display: block;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+	.h-menu {
+		color: var(--blue-gradient);
+		position: absolute;
+		top: 3.5rem;
+		right: 1rem;
+		width: calc(100vw - 1.5rem);
+		height: calc(100vh - 3.5rem);
+		background-color: rgba(19, 17, 16, 0.98);
+		flex-direction: column;
+		font-weight: 500;
+		border-radius: 10px;
+		align-items: flex-center;
+		align-items: center;
+		background-color: rebeccapurple;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+		transition: all 0.5s ease-in-out;
+		z-index: 2;
+	}
 }
