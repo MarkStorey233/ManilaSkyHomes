@@ -3,10 +3,7 @@ footer {
 	bottom: 0;
 	background: linear-gradient(to right, #010627, var(--black));
 	color: #fff;
-	margin: 2rem 0 0 0;
 	padding: 2rem 0;
-
-	border-top-left-radius: 125px;
 }
 
 .f-container {
@@ -26,10 +23,11 @@ footer {
 }
 .col_two > div {
 	margin: 0.5rem 0;
+	color: rgba(218, 165, 32, 0.534);
 }
 
 .col_two .footer-email {
-	gap: 4px;
+	gap: 10px;
 }
 
 .col p,
@@ -62,13 +60,6 @@ footer {
 	box-shadow: 0px 2px 0px slategray;
 }
 
-.col-four .white-gradient {
-	position: absolute;
-	width: 15rem;
-	height: 15rem;
-	background: rgba(255, 255, 255, 0.522);
-}
-
 .col-four {
 	background-color: rgba(255, 255, 255, 0.1);
 
@@ -84,11 +75,9 @@ footer {
 .col-four .primaryText {
 	font-size: 1.2rem;
 	font-weight: 800;
-	color: whitesmoke;
 }
 
 .col-four button {
-	border-radius: 100px;
 	margin: 1rem 0;
 }
 

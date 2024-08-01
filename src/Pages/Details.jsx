@@ -1,18 +1,17 @@
 import React from 'react';
+import PropertyDetails from '../components/PropertyDetails/PropertyDetails';
 import Header from '../components/Header/Header';
-import PropertyList from '../components/PropertyList/PropertyList';
 import Footer from '../components/Footer/Footer';
 
-const Listing = () => {
+const Details = () => {
 	return (
 		<>
 			<div className='App'>
 				<Header />
-				<PropertyList />
+				<PropertyDetails />
 				<Footer />
 			</div>
 		</>
 	);
 };
-
-export default Listing;
+export default Details;

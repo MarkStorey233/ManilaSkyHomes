@@ -16,14 +16,30 @@ const Footer = () => {
 		});
 	}, []);
 
+	const handleBookAppointmentClick = () => {
+		if (location.pathname === '/') {
+			document
+				.getElementById('contact-form')
+				.scrollIntoView({ behavior: 'smooth' });
+		} else {
+			navigate('/');
+			setTimeout(() => {
+				document
+					.getElementById('contact-form')
+					.scrollIntoView({ behavior: 'smooth' });
+			}, 100);
+		}
+		setMenuOpened(false);
+	};
+
 	return (
 		<footer className='f-wrapper'>
 			<div className='row innerWidth paddings f-container'>
 				<div
 					className='col'
 					data-aos='zoom-in'
-					data-aos-duration='800'
-					data-aos-delay='800'
+					data-aos-duration='200'
+					data-aos-delay='300'
 				>
 					<img
 						className='Logo'
@@ -35,8 +51,8 @@ const Footer = () => {
 				<div
 					className='col col_two'
 					data-aos='zoom-in'
-					data-aos-duration='800'
-					data-aos-delay='1000'
+					data-aos-duration='300'
+					data-aos-delay='400'
 				>
 					<div>123 Vermont Street,</div>
 					<div>Greenfield District, </div>
@@ -75,10 +91,16 @@ const Footer = () => {
 				>
 					<LuCalendarSearch size={50} />
 					<span className='primaryText'> Book a Meeting </span>
-					<span> We are happy to answer your</span>
-					<span> questions and take you</span>
-					<span> on a product demo</span>
-					<button className='button'> Book a demo </button>
+					<span>
+						We are happy to answer your questions and take you on a
+						product demo
+					</span>
+					<button
+						className='button'
+						onClick={handleBookAppointmentClick}
+					>
+						Book a demo
+					</button>
 				</div>
 			</div>
 		</footer>

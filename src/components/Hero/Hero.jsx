@@ -5,6 +5,7 @@ import HeroImg from '../../assets/images/hero-image.png';
 import { HiLocationMarker } from 'react-icons/hi';
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
+import { BsPerson, BsSearch } from 'react-icons/bs';
 
 const Hero = () => {
 	return (
@@ -40,9 +41,14 @@ const Hero = () => {
 					{/* Search Bar */}
 
 					<div className='flexCenter searchBar'>
-						<HiLocationMarker className='icon' />
+						<BsSearch
+							size={20}
+							id='iconSearch'
+						/>
+
 						<input
 							type='text'
+							style={{ fontSize: '1rem' }}
 							placeholder='Seach properties here'
 						/>
 						<button className='button'>Search</button>

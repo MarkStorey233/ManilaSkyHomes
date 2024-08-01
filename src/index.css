@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-	--primary: #1f3e72;
+	--primary: #a37e29;
 	--secondary: rgba(255, 255, 255, 0.78);
 	--black: #131110;
 	--blue-gradient: linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
-	--orange-gradient: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
-	--blue: #4066ff;
-	--lightBlue: #eeeeff;
+	/* --orange-gradient: linear-gradient(270deg, #ffb978 0%, #ff922d 100%); */
+	--orange-gradient: linear-gradient(
+		40.05deg,
+		#ffffff 20%,
+		#a37e29 70%,
+		#ffd700 100%
+	);
 	--shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
 	--font-family: 'Montserrat', sans-serif;
+	--border: 2px solid goldenrod;
 }
 
 * {
@@ -18,6 +23,28 @@
 	box-sizing: border-box;
 	font-family: var(--font-family);
 	scroll-behavior: smooth;
+	letter-spacing: 1px;
+	background-image: repeating-linear-gradient(
+		to right,
+		#a2682a 0%,
+		#be8c3c 8%,
+		#be8c3c 18%,
+		#d3b15f 27%,
+		#faf0a0 35%,
+		#ffffc2 40%,
+		#faf0a0 50%,
+		#d3b15f 58%,
+		#be8c3c 67%,
+		#b17b32 77%,
+		#bb8332 83%,
+		#d4a245 88%,
+		#e1b453 93%,
+		#a4692a 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* For Firefox */
+	background-clip: text;
 }
 
 a {
@@ -76,34 +103,27 @@ a {
 }
 
 .primaryText {
-	color: #1f3e72;
 	font-weight: bold;
 	font-size: 2rem;
 }
 
 .secondaryText {
-	color: rgb(140 139 139);
-	font-size: 0.8rem;
+	line-height: 1.5;
+	font-size: 1rem;
 }
 
 .orangeText {
-	color: goldenrod;
 	font-size: 1.5rem;
 	font-weight: 700;
 }
 
-.icon {
-	color: #4066ff;
-}
-
 /* Button */
 .button {
-	font-weight: 500;
+	border: 1px solid goldenrod;
+	font-weight: 800;
 	padding: 0.6rem 1.4rem;
-	color: whitesmoke;
-	background: var(--blue-gradient);
-	border: none;
-
+	margin: 0 1rem;
+	font-size: larger;
 	border-radius: 4px;
 	transition: all 300ms ease-in;
 }

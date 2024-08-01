@@ -1,13 +1,12 @@
-.v-container .img-container {
-	border: 8px solid rgb(232, 232, 232/ 93%);
+.v-wrapper {
+	background: hwb(212 6% 70%);
 }
-
+.v-container {
+	justify-content: center;
+	gap: 1rem;
+}
 .v-container > div {
-	flex: 1;
-}
-
-.v-right {
-	gap: 0.5rem;
+	width: calc(50% - 10px);
 }
 
 .accordion {
@@ -15,31 +14,26 @@
 	border: none;
 	width: 100%;
 }
-
+.v-right {
+	gap: 1rem;
+}
 .accordionItem {
 	background-color: whitesmoke;
-	border: 0.8px solid rgba(128, 128, 128, 0.143);
+	border: 0.8px solid goldenrod;
 	border-radius: 8px;
 	overflow: hidden;
-	margin-bottom: 20px;
+	margin-bottom: 1rem;
 }
 
 .accordionButton {
-	background-color: white;
-	justify-content: space-between !important;
-	padding: 1rem;
-	width: 100%;
+	justify-content: space-between;
 	cursor: pointer;
 }
 
 .icon {
 	padding: 10px;
-	background: #efefef;
+	color: goldenrod;
 	border-radius: 5px;
-}
-
-.icon svg {
-	fill: var(--blue);
 }
 
 .accordionButton .primaryText {
@@ -48,7 +42,7 @@
 
 .accordionPanel p {
 	text-align: justify;
-	padding: 1rem 2rem;
+	padding: 0.5rem;
 }
 
 .accordionItem.expanded {
@@ -56,31 +50,30 @@
 	border-radius: 6px;
 }
 
-@media (max-width: 800px) {
-	.v-container {
-		flex-direction: column !important;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
+@media (max-width: 900px) {
+	.v-container > div {
+		width: 100vw;
+		margin: auto;
+		padding: 5px;
 	}
 }
 
 @media (max-width: 500px) {
-	.v-container > * {
-		flex-direction: column !important;
-		justify-content: center;
-		align-items: center;
+	.v-container {
 		width: 100%;
+		gap: 1rem;
 	}
-
-	.accordionButton {
-		display: flex;
+	.v-container .accordionButton {
+		justify-content: space-between;
+		padding: 1rem;
 	}
-	.accordionButton .primaryText {
+	.v-container .secondaryText {
+		font-size: 0.6rem;
+	}
+	.v-container .primaryText {
 		font-size: 0.8rem;
 	}
-	.accordionButton > .icon {
-		width: 1.2rem;
-		padding: 0;
+	.v-container .icon {
+		width: 1rem;
 	}
 }

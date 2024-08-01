@@ -34,26 +34,24 @@ const Value = () => {
 		>
 			<div className='paddings innerWidth flexCenter v-container'>
 				{/* Left Side */}
-				<div className='v-left flexStart'>
-					<div
-						className='img-container'
-						data-aos='fade-right'
-						data-aos-duration='1800'
-						data-aos-delay='100'
-					>
-						<img
-							src={valueImg}
-							alt='Value Image'
-						/>
-					</div>
+				<div
+					className='img-container'
+					data-aos='fade-right'
+					data-aos-duration='1800'
+					data-aos-delay='100'
+				>
+					<img
+						src={valueImg}
+						alt='Value Image'
+					/>
 				</div>
 
 				{/* Right Side */}
 				<div
-					className='flexColStart v-right'
-					data-aos='fade-left'
+					data-aos='fade-left '
 					data-aos-duration='1800'
 					data-aos-delay='600'
+					className='flexColStart v-right'
 				>
 					<span className='orangeText'>Our Value</span>
 					<span className='primaryText'>Value We Give to You</span>

@@ -1,0 +1,86 @@
+/* PropertyDetails.css */
+
+.pd-container {
+	max-width: 1280px;
+	margin: auto;
+	padding: 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.pd-left-section {
+	width: 60vw;
+	padding: 1rem;
+}
+
+.p-facilities {
+	padding: 1rem 0;
+	gap: 1rem;
+}
+
+.p-facilities-inner {
+	gap: 1rem;
+}
+
+.p-facilities-bottom {
+	padding: 1rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.location {
+	gap: 0.5rem;
+}
+
+.location .icon {
+	margin: 0;
+}
+
+.pd_content-container {
+	display: flex;
+}
+
+.right-section {
+	width: 35vw;
+	padding: 1rem;
+}
+
+.right-section > h2 {
+	padding: 0.5rem 0;
+}
+
+.carousel-container {
+	padding: 1rem;
+}
+
+/* Set the carousel height to 600px */
+.carousel {
+	height: 600px;
+}
+
+/* Adjust images to fit the height of the carousel */
+.carousel .slide img {
+	height: 600px;
+	object-fit: cover;
+	width: 100%; /* Ensure the images take up the full width */
+	border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+	.pd-left-section {
+		flex-direction: column;
+	}
+	.pd_content-container {
+		flex-direction: column;
+	}
+	.pd-left-section {
+		width: 100%;
+	}
+	.right-section {
+		width: 100%;
+	}
+	.p-facilities {
+		gap: 2rem;
+	}
+}

@@ -1,11 +1,11 @@
 .App {
 	position: relative;
 	overflow-x: clip;
-	background: #dedac5;
+	background: #001633e5;
 }
 
 .App > :nth-child(1) {
-	background: var(--black);
+	background: rgba(0, 22, 51, 0.315);
 	position: relative;
 }
 

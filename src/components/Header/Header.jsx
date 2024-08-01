@@ -15,7 +15,7 @@ const Header = () => {
 	const getMenuStyles = (menuOpened) => {
 		if (document.documentElement.clientWidth <= 800) {
 			return {
-				top: !menuOpened && '-100%',
+				top: !menuOpened && '-100vh',
 			};
 		}
 	};
@@ -85,7 +85,14 @@ const Header = () => {
 						>
 							Getting Started
 						</a>
-						<button className='button'>Contact</button>
+						<section>
+							<button
+								className='button'
+								onClick={handleGettingStartedClick}
+							>
+								<span>Contact</span>
+							</button>
+						</section>
 					</div>
 					<div
 						className='menu-icon'
