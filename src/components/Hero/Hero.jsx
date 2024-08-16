@@ -23,19 +23,18 @@ const Hero = () => {
 						<div className='orange-circle' />
 						<h1>
 							Discover
-							<br /> Most Sitable
-							<br /> Property
+							<br /> Manila Sky
+							<br /> Homes
 						</h1>
 					</div>
 					<div className='flexColStart hero-des'>
 						<span className='secondaryText'>
-							Find a variety of properties that suit you very
-							easilty
+							Find your next property at Manila Sky Homes.
 						</span>
 						<span className='secondaryText'>
-							Forget all difficulties in finding a residence for
-							you
+							Be it a house and lot or condominium units,
 						</span>
+						<span> we offer the best spots for you</span>
 					</div>
 
 					{/* Search Bar */}
@@ -54,8 +53,8 @@ const Hero = () => {
 						<button className='button'>Search</button>
 					</div>
 
+					{/* Stat 1
 					<div className='stats'>
-						{/* Stat 1 */}
 						<div className='flexColCenter stat'>
 							<span>
 								<CountUp
@@ -69,7 +68,8 @@ const Hero = () => {
 								Premium Products
 							</span>
 						</div>
-						{/* Stat 2 */}
+								*/}
+					{/* Stat 2 
 						<div className='flexColCenter stat'>
 							<span>
 								<CountUp
@@ -83,7 +83,8 @@ const Hero = () => {
 								Happy Customers
 							</span>
 						</div>
-						{/* Stat 3 */}
+								*/}
+					{/* Stat 3 
 
 						<div className='flexColCenter stat'>
 							<span className='check'>
@@ -95,9 +96,10 @@ const Hero = () => {
 							</span>
 							<span className='secondaryText'>Award Winning</span>
 						</div>
-
-						{/* Stat End */}
+						*/}
+					{/* Stat End 
 					</div>
+						*/}
 				</motion.div>
 
 				{/* right side */}
