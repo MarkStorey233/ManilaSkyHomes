@@ -5,6 +5,7 @@ import { LuCalendarSearch } from 'react-icons/lu';
 import { BsEnvelope } from 'react-icons/bs';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	useEffect(() => {
@@ -73,7 +74,7 @@ const Footer = () => {
 							<a href='#'> Company </a>
 						</li>
 						<li>
-							<a href='/about'> About Us </a>
+							<Link to='/about'> About Us </Link>
 						</li>
 						<li>
 							<a href='#'> What we Do </a>

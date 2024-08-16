@@ -11,17 +11,13 @@ import Footer from '../Footer/Footer';
 const App = () => {
 	return (
 		<>
-			<div className='App'>
-				<div>
-					<div className='white-gradient' />
-					{/* <Header /> */}
-					<Hero />
-				</div>
-				<Properties />
-				<Value />
-				<Contact />
-				{/* <Footer /> */}
+			<div>
+				<div className='white-gradient' />
+				<Hero />
 			</div>
+			<Properties />
+			<Value />
+			<Contact />
 		</>
 	);
 };

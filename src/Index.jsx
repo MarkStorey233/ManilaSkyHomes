@@ -10,26 +10,28 @@ import Footer from './components/Footer/Footer.jsx';
 const Index = () => {
 	return (
 		<>
-			<Header />
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='/listing'
-					element={<Listing />}
-				/>
-				<Route
-					path='/details/:id'
-					element={<Details />}
-				/>
-				<Route
-					path='/about'
-					element={<About />}
-				/>
-			</Routes>
-			<Footer />
+			<div className='App'>
+				<Header />
+				<Routes>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+					<Route
+						path='/listing'
+						element={<Listing />}
+					/>
+					<Route
+						path='/details/:id'
+						element={<Details />}
+					/>
+					<Route
+						path='/about'
+						element={<About />}
+					/>
+				</Routes>
+				<Footer />
+			</div>
 		</>
 	);
 };

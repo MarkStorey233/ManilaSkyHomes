@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import './Contact.css';
+import './Contact.css'; // Import updated CSS file
 import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import React Toastify styles
 
 import ContactImg from '../../assets/images/contact.jpg';
 import { BsEnvelope, BsPerson } from 'react-icons/bs';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 const Contact = () => {
 	useEffect(() => {
@@ -24,28 +25,18 @@ const Contact = () => {
 
 		emailjs
 			.sendForm(
-				'service_cois6vs',
-				'template_nezbmix',
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 				form.current,
-				'dt48432fCrysnYAET'
+				import.meta.env.VITE_EMAILJS_USER_ID
 			)
 			.then(
 				() => {
-					Swal.fire({
-						title: 'Success!',
-						text: 'Your email has been sent.',
-						icon: 'success',
-						confirmButtonText: 'OK',
-					});
+					toast.success('Your email has been sent.');
 					form.current.reset(); // Reset form after success
 				},
 				(error) => {
-					Swal.fire({
-						title: 'Error!',
-						text: `Failed to send email: ${error.text}`,
-						icon: 'error',
-						confirmButtonText: 'OK',
-					});
+					toast.error(`Failed to send email: ${error.text}`);
 				}
 			);
 	};
@@ -134,6 +125,18 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
+			{/* Toast Container */}
+			<ToastContainer
+				position='top-right'
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
 		</section>
 	);
 };
