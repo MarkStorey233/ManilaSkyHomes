@@ -54,12 +54,12 @@ const Footer = () => {
 					data-aos-duration='300'
 					data-aos-delay='400'
 				>
-					<div>123 Vermont Street,</div>
-					<div>Greenfield District, </div>
-					<div>Mandaluyong, Philippines </div>
+					<div>Address: 750 Shaw Blvd,</div>
+					<div> Mandaluyong, 1554, </div>
+					<div> Metro Manila, Philippines </div>
 					<div className='flexStart footer-email'>
 						<BsEnvelope size={20} />
-						email@email.com
+						customercare@manilaskyhomes.com
 					</div>
 				</div>
 				<div
@@ -73,7 +73,7 @@ const Footer = () => {
 							<a href='#'> Company </a>
 						</li>
 						<li>
-							<a href='#'> About Us </a>
+							<a href='/about'> About Us </a>
 						</li>
 						<li>
 							<a href='#'> What we Do </a>

@@ -2,13 +2,15 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import Listing from './Pages/Listing';
-import PropertyDetails from './components/PropertyDetails/PropertyDetails.jsx';
 import Header from './components/Header/Header.jsx';
 import Details from './Pages/Details.jsx';
+import About from './Pages/About.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 const Index = () => {
 	return (
 		<>
+			<Header />
 			<Routes>
 				<Route
 					path='/'
@@ -22,7 +24,12 @@ const Index = () => {
 					path='/details/:id'
 					element={<Details />}
 				/>
+				<Route
+					path='/about'
+					element={<About />}
+				/>
 			</Routes>
+			<Footer />
 		</>
 	);
 };

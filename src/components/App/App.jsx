@@ -14,13 +14,13 @@ const App = () => {
 			<div className='App'>
 				<div>
 					<div className='white-gradient' />
-					<Header />
+					{/* <Header /> */}
 					<Hero />
 				</div>
 				<Properties />
 				<Value />
 				<Contact />
-				<Footer />
+				{/* <Footer /> */}
 			</div>
 		</>
 	);

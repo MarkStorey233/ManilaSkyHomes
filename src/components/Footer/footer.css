@@ -9,24 +9,27 @@ footer {
 .f-container {
 	width: 100%;
 	margin: auto;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+	gap: 20px; /* Space between columns */
 	align-items: flex-start;
-	justify-content: space-between;
 }
 
 .col {
-	flex-basis: 24%;
-	align-items: center;
-	justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	padding: 1rem 0.5rem;
 }
+
 .col_two > div {
 	margin: 0.5rem 0;
 	color: rgba(218, 165, 32, 0.534);
 }
 
 .col_two .footer-email {
+	display: flex;
+	align-items: center;
 	gap: 10px;
 }
 
@@ -37,12 +40,11 @@ footer {
 	font-size: 1.2rem;
 	line-height: 2rem;
 }
+
 .col-three ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .col-three li {
@@ -52,6 +54,7 @@ footer {
 .col-three ul li a {
 	text-decoration: none;
 	padding: 8px 5px;
+	color: inherit;
 }
 
 .col-three ul li a:hover {
@@ -61,45 +64,68 @@ footer {
 }
 
 .col-four {
-	background-color: rgba(255, 255, 255, 0.1);
-
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	gap: 10px;
-	padding: 1rem 1.5rem;
-	border-radius: 10px;
+	padding: 1rem 0.5rem;
 }
 
 .col-four .primaryText {
 	font-size: 1.2rem;
 	font-weight: 800;
+	text-align: center;
 }
 
 .col-four button {
 	margin: 1rem 0;
 }
 
-@media (max-width: 1024px) {
+/* At 1234px, show two items in a row */
+@media (max-width: 1234px) {
 	.f-container {
-		justify-content: center;
-		align-items: center;
-		width: 100%;
+		grid-template-columns: repeat(2, 1fr); /* 2 columns */
+		gap: 20px;
 	}
 
-	.f-container > * {
-		justify-content: center;
-		margin: 1rem auto;
-		flex-basis: 32%;
+	.col {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1024px) {
+	.f-container {
+		grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+		gap: 15px;
+	}
+
+	.col {
+		align-items: center;
+		text-align: center;
+	}
+
+	.col-four .primaryText {
+		text-align: center;
 	}
 }
 
 @media (max-width: 768px) {
 	.f-container {
-		flex-direction: column;
+		grid-template-columns: 1fr; /* 1 column for mobile */
+		gap: 10px;
 	}
-	.f-container .col {
+
+	.col {
+		align-items: center;
+		text-align: center;
 		width: 100%;
+	}
+
+	.footer-email {
+		display: flex;
+		justify-content: center;
+		text-align: center;
 	}
 }
